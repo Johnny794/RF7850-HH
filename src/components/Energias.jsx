@@ -1,12 +1,22 @@
 import React from 'react';
-import { Link } from "react-router-dom"
-import "./styles/Energias.css"
+import {Link} from 'react-router-dom';
+import { BsArrowLeft } from "react-icons/bs";
 
-function App() {
-  return (
-    <div>
-      <header className="App-header">
-        <div className="text mt-5">
+import '../styles/Inicio'
+
+const Home = () => {
+    return (
+        <div >
+        <ul className="navbar-nav mr-auto" >
+            <Link to = "/">
+                <li className="nav-item active m-1 ">
+                    <button className="btn btn-primary btn-sm">
+                        <BsArrowLeft/>
+                    </button>
+                </li> 
+            </Link>
+            </ul>
+            <div className="text mt-5">
                 <h2>¿Energias Renovables: cúal te gustaria conocer? </h2>
             </div>
          
@@ -35,10 +45,10 @@ function App() {
                     </div>  
                 </div>    
             </div>
-      </header>
-      
-    </div>
-  );
+         
+            
+        </div>
+    )
 }
 
-export default App;
+export default Home

@@ -4,6 +4,13 @@
 
 .App-logo {
   height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
@@ -18,15 +25,80 @@
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #61dafb;
 }
 
-.about {
-  margin-top: 10%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  margin-top: 30px;
+}
+.multibox {
+  border: 3px double #ccc;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 300px;
+  max-height: 400px;
+  align-content: stretch;
 }
 
+.multibox .box {
+  flex-basis: 33.3%;
+}
+.multibox .box.green {
+  background: green;
+}
+.multibox .box.img_1 {
+ background-image: url('/1.jpg')
+}
+.multibox .box.img_2 {
+ background-image: url('/2.jpg')
+}
+.multibox .box.img_3 {
+ background-image: url('/3.jpg')
+}
+.multibox .box.img_4 {
+ background-image: url('/4.jpg')
+}
+.multibox .box.img_5 {
+ background-image: url('/5.jpg')
+}
+.multibox .box.img_6 {
+ background-image: url('/6.jpg')
+}
+.multibox .box.img_7 {
+ background-image: url('/7.jpg')
+}
+.multibox .box.img_8 {
+ background-image: url('/8.jpg')
+}
+.multibox .box.orange {
+ background: orange;
+}
+.multibox .box.blue {
+ background: blue;
+}
+.multibox .box.red {
+ background: red;
+}
+.multibox .box.brown {
+ background: brown;
+}
+.multibox .box.grey {
+ background: grey;
+}
+.multibox .box.skyblue {
+ background: skyblue;
+}
