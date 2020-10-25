@@ -1,8 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft } from "react-icons/bs";
-import {useSpring, animated} from 'react-spring'
-
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import {useSpring, animated} from 'react-spring';
+import SolarUno from './SolarUno';
+import Click from './click'
+import Panel from './PanelAnimation'
 const Solar = () => {
 
 const [props, set, stop] = useSpring(() => ({opacity: 0}))
@@ -31,10 +33,25 @@ function fadeIn(e) {
 
 
     return (
-       
+    <div>
         <div>
+            <div style={styles.contain} >
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <ul className="navbar-nav mr-auto ">
+                        <Link to = "/home">
+                            <li className="nav-item active">
+                                <button className="btn btn-primary btn-sm"><BsArrowLeft/>Atras</button>
+                            </li> 
+                        </Link>                  
+                    </ul> 
+                    <h4 className="navbar-brand  ">Energia Solar</h4>   
+                </nav>  
+                <SolarUno/>   
+                {/*<EolicaDos/>*/}
+            </div>
+        </div>  
         <div style={styles.contain} >
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            {/*<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <ul className="navbar-nav mr-auto ">
                     <Link to = "/">
                         <li className="nav-item active">
@@ -66,41 +83,22 @@ function fadeIn(e) {
                     </Link>                
                 </ul> 
                 <a className="navbar-brand  ">Energia Solar</a>   
-            </nav>
+            </nav>*/}
             <div>  
 
-            <div style={styles.card} className="card text-white bg-dark ">
-                <h4 className="mt-2 align-self-center " > Sistema Fotoelectrico </h4>
-                    <div className="row d-flex align-self-center mb-4" >
-                                    <div className="col" >
-                                        <button className="btn btn-primary btn-sm" onClick={fadeIn}>
-                                            ¿Ques es?
-                                        </button> 
-                                    </div>
-                                    <div className="col" >
-                                        <animated.div style={props4} >
-                                            <div className="card text-white bg-primary mb-3 d-inline-block" style={styles.cardtwo} > 
-                                                <div className="card-body border border-primary">
-                                                    Es un sistema que consiste en la integración de varios componentes, 
-                                                    cada uno de ellos cumpliendo con una o más funciones específicas, a fin de 
-                                                    que éste pueda suplir la demanda de energía eléctrica requerida por el tipo de carga, 
-                                                    usando la energía de la radiación solar para convertirla en energía eléctrica.
-                                                </div>
-                                            </div>
-                                        </animated.div> 
-                                    </div>
-                                </div>
+            <div style={styles.card} className="card text-dark bg-light ">        
                 <h4 className="mt-2 align-self-center " > ¿Cómo Funciona? </h4>
                     <div className="card-body" >                      
                         <div className="row">
                             <div className="col">    
                                 <div className="d-flex justify-content-left media " >                        
-                                    <img className="d-flex align-self-center rounded-lg "  src="./assets/solar/psolar.jpg" alt="" />
+                                    <img className="d-flex align-self-center rounded-lg "  src="./psolar.jpg" alt="" />
                                 </div> 
                             </div>
                             <div className="col">
                                 <div className="row" >
                                     <div className="col" >
+                                    <Click/>
                                         <button className="btn btn-success btn-sm" onClick={fade}>
                                             Modulo fotovoltaico
                                         </button> 
@@ -119,6 +117,7 @@ function fadeIn(e) {
                                 </div>
                                 <div className="row" >
                                     <div className="col" >
+                                    <Click/>
                                         <button className="btn btn-info btn-sm" onClick={fade2}>
                                             Batería o acumulador
                                         </button> 
@@ -138,6 +137,7 @@ function fadeIn(e) {
                                 </div>
                                 <div className="row" >
                                     <div className="col" >
+                                    <Click/>
                                         <button className="btn btn-secondary btn-sm" onClick={fade3}>
                                             Inversor de voltaje
                                         </button> 
@@ -146,7 +146,7 @@ function fadeIn(e) {
                                         <animated.div style={props3} >
                                             <div className="card text-white bg-secondary mb-3 d-inline-block" style={styles.cardtwo} > 
                                                 <div className="card-body border border-secondary">
-                                                    Un inversor de corriente se utiliza para transformar el voltaje
+                                                    Un inversor se utiliza para transformar el voltaje
                                                     de 12 o 24 voltios de las baterías (corriente continua) para emplear 
                                                     el voltaje de la vivienda de 230 voltios (corriente alterna). 
                                                 </div>
@@ -158,45 +158,35 @@ function fadeIn(e) {
                         </div>
                     </div> 
                 </div>                   
-                <div style={styles.card} className="card ">  
-                    <div className="card-body">   
+                <div style={styles.card} className="card text-white bg-dark">  
+                    <div className="card-body">  
                         <div className="row"> 
                             <div className="col">  
-                                <h4 className="mt-1"> </h4>
-                                <div className="d-flex justify-content-left" >    
-                                    <div id="carouselExampleIndicators" className="carousel slide" data-interval="false" data-ride="carousel">
-                                        <div className="carousel-inner" role="listbox">
-                                            <div className="carousel-item active">
-                                                <img style={styles.image} src="#" src="./assets/solar/solar1.PNG" alt="First slide"/>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img style={styles.image} src="#" src="./assets/solar/solar4.PNG" alt="Second slide"/>
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img style={styles.image} src="#" src="./assets/solar/solar3.PNG" alt="Second slide"/>
-                                            </div>
-                                        </div>
-                                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span className="sr-only">Previous</span>
-                                        </a>
-                                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span className="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
+                                <Panel/>
                             </div>
                             <div className="col">
-                                <h5 className="font-weight-bold" > Tipos de paneles solares </h5>
+                            <h5 className="font-weight-bold align-self-center " > Tipos de paneles solares </h5> 
                                 <ul>
-                                    <li className="m-3" > <span className="font-weight-bold"> Paneles solares monocristalinos:</span> <br/> En los paneles solares monocristalinos 
+                                    <li className="mt-3" > <span className="font-weight-bold"> Paneles solares monocristalinos:</span> <br/> En los paneles solares monocristalinos 
                                     las celdas solares de silicio monocristalino (mono-Si), son bastante fáciles 
                                     de reconocer por su coloración y aspecto uniforme, que indica una alta pureza en silicio. </li>
-                                    <li className="m-3" > <span className="font-weight-bold"> Paneles solares policristalinos:</span> <br/> Los paneles solares policristalinos están compuestos, 
+                                    <li className="mt-3" > <span className="font-weight-bold"> Paneles solares policristalinos:</span> <br/> Los paneles solares policristalinos están compuestos, 
                                     en este caso, por células policristalinas. Podemos diferencia por su color “azulado” y no
                                      poseen el chaflán en las esquinas como los monocristalinos. </li>
                                 </ul>
+                            <div className="m-5 " >
+                                    <a
+                                    className="App-link"
+                                    href="https://como-funciona.co/el-sistema-fotovoltaico/"  
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >
+                                    Mas acerca de los sistemas fotovoltaicos                              
+                                    </a>
+                            </div> 
+                            <Link to="implementacion-solar" className='m-5' >
+                                        <button type="button" className="btn btn-primary btn-sm" >Ver implementacion <BsArrowRight/> </button>
+                            </Link>     
                             </div>
                         </div>  
                     </div>        

@@ -23,13 +23,13 @@ const ImplementacionEolica = () => {
             <div style={styles.card} className="card m-1 text-white bg-dark" >
                 <h4 className="mt-2 align-self-center " > ¿Qué debo tener en cuenta a la hora de implementar un aerogenerador? </h4>
                 <div className="card-body" >
-                    <div class="alert alert-danger" role="alert">
+                    <div className="alert alert-danger" role="alert">
                         <h5 className="mt-1 text-danger " > ATENCIÓN </h5>
                             La seguridad debe ser su principal preocupación al elegir su ubicación. Pueden existir peligros inherentes eléctricos  y / o mecánicos              
                     </div> 
                     <div className="row">
                         <div className="col" > 
-                            <div class="alert alert-primary" role="alert">
+                            <div className="alert alert-primary" role="alert">
                                 PRECAUCIONES
                                 <br/>
                                 <ul>
@@ -40,7 +40,7 @@ const ImplementacionEolica = () => {
                                             en las líneas que conectan a la batería.</li>
                                 </ul>
                             </div>  
-                            <div class="alert alert-info" role="alert">
+                            <div className="alert alert-info" role="alert">
                                  TENGA EN CUENTA
                                 <br/>
                                 <ul>

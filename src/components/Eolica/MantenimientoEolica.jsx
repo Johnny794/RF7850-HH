@@ -53,7 +53,7 @@ const [props6, set6, stop6] = useSpring(() => ({opacity: 0}))
                         </li> 
                     </Link>
                 </ul> 
-                <a className="navbar-brand  ">Energia Eolica</a>   
+                <h4 className="navbar-brand  ">Energia Eolica</h4>   
             </nav>
             <div style={styles.card} className="card text-white bg-dark m-1" > 
                 <div className="card-body row" >

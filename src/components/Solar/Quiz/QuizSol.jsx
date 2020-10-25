@@ -88,7 +88,7 @@ finishHandler =() => {
         const {question, options, currentIndex, userAnswer, quizEnd} = this.state //get the current state       
         if(quizEnd) {
             return (
-                    <div className="card text-white bg-dark " >
+                <div className="card text-white bg-dark " >
                     <div className="card-body d-flex justify-content-center  ">
                         <div className="row">
                             <div className="col">
@@ -116,6 +116,7 @@ finishHandler =() => {
         return (
             <div style={styles.contain} > 
                 <div className="card text-white bg-dark " >
+                <h4 className="mt-2 align-self-center " >Resuelve este sencillo test</h4>
                     <div className="card-body d-flex justify-content-center  ">
                         <div className="row">
                             <div className="col">

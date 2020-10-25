@@ -6,8 +6,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import'bootstrap-css-only/css/bootstrap.min.css'; 
 import'mdbreact/dist/css/mdb.css';
 
-import Home from "./App"
-import About from "./pages/about"
+import Inicio from "./App"
+import Home from "./Home"
 import Eolica from './components//Eolica/Eolica.jsx';
 import Solar from './components/Solar/Solar.jsx';
 import ImplementacionEolica from './components/Eolica/ImplementacionEolica.jsx';
@@ -21,8 +21,8 @@ ReactDOM.render(
     <Router>
         <div>
             <main>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
+                <Route exact path="/" component={Inicio} />
+                <Route path="/home" component={Home} />
                 <Route exact path = '/eolica' component={Eolica}/> 
                 <Route exact path = '/solar' component={Solar}/> 
                 <Route exact path = '/implementacion-eolica' component={ImplementacionEolica}/>

@@ -31,21 +31,21 @@ const EolicaDos = () => {
                         <div className="col">
                             <h5 className="font-weight-bold" > Ten en cuenta estas partes importantes: </h5>
                                 <ul>
-                                    <div class="alert alert-primary" role="alert">
+                                    <div className="alert alert-primary" role="alert">
                                         <li className="m-3 text-justify " > <span className="font-weight-bold"> Bateria:</span> <br/> 
                                         Cualquier sistema autónomo que genere electricidad requiere algún aparato donde almacenar
                                         o acumular la carga.. Las baterías en base ácido-plomo se caracterizan por: capacidad en 
                                         Amperios/horas, eficienciade carga, profundidad de descarga y auto descargar.
                                         </li>                                       
                                     </div>
-                                    <div class="alert alert-primary" role="alert">
+                                    <div className="alert alert-primary" role="alert">
                                         <li className="m-3 text-justify " > <span className="font-weight-bold"> Regulador de carga:</span> <br/> 
                                         Es un componente que se utiliza para regular la carga y dar aviso en caso de que la batería está
                                         próxima a la descarga o incluso a la sobrecarga. Es decir, regula y controla 
                                         el proceso de carga y descarga de las baterías
                                         </li>
                                     </div>
-                                    <div class="alert alert-primary" role="alert">
+                                    <div className="alert alert-primary" role="alert">
                                         <li className="m-3 text-justify " > <span className="font-weight-bold"> inversor:</span> <br/> Es el dispositivo 
                                         electrónico que convierte el voltaje que recibe como corriente continua y lo
                                         pasa a corriente alterna con distinto voltaje. Se recomienda obtener un inversor que cumpla con

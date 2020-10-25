@@ -106,12 +106,13 @@ export default class Media extends Component {
             <div style={styles.contain} >
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <ul className="navbar-nav mr-auto ">
-                        <Link to = "/">
+                        <Link to = "/mantenimiento-eolica">
                             <li className="nav-item active">
                                 <button className="btn btn-primary btn-sm">Volver a empezar</button>
                             </li>
                         </Link>                 
                     </ul> 
+                    <h4 className="navbar-brand  ">Energia Eolica</h4>
                 </nav> 
 {/*PUUUZZZZLLLEEEEE*/}
                 <div style={styles.card} className="card m-1 text-white bg-dark" >

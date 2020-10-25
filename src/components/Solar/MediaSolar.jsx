@@ -107,22 +107,23 @@ export default class Media extends Component {
             <div style={styles.contain} >
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <ul className="navbar-nav mr-auto ">
-                        <Link to = "/solar">
+                        <Link to = "/mantenimiento-solar">
                             <li className="nav-item active">
-                                <button className="btn btn-primary btn-sm"><BsArrowLeft/></button>
+                                <button className="btn btn-primary btn-sm"><BsArrowLeft/>Atras</button>
                             </li>
                         </Link>                 
                     </ul> 
-                <a className="navbar-brand  ">Ponte a Prueba</a>   
+                <h4 className="navbar-brand  ">Energia Eolica</h4>  
                 </nav> 
 {/*PUUUZZZZLLLEEEEE*/}
                 <div style={styles.card} className="card m-1 text-white bg-dark" >
                   <div className="cardbody" >
                     <div className="App">
-                      <div className="row"> 
+                      <h4 className="mt-2 align-self-center " > Arma el sistema Fotovoltaico </h4>
+                      <div className="row mt-5"> 
                         <div className= "col">
                           <div className="wrapper">
-                              <img src="./assets/solar/psolar.jpg" className="App-logo" alt="logo" />
+                              <img src="./psolar.jpg" className="App-logo" alt="logo" />
                           </div>
                         </div>
                         <div className="col">
@@ -208,7 +209,7 @@ const styles = {
     },
     card:{
         marginBottom:5,
-        height:700
+        height:480
     },
     pieza:{
         width:100,

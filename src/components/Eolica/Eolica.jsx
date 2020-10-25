@@ -7,20 +7,20 @@ import EolicaUno from './EolicaUno'
 
 
 
-const Solar = () => {
+const Eolica = () => {
 
     return (       
         <div>
             <div style={styles.contain} >
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <ul className="navbar-nav mr-auto ">
-                        <Link to = "/">
+                        <Link to = "/home">
                             <li className="nav-item active">
                                 <button className="btn btn-primary btn-sm"><BsArrowLeft/>Atras</button>
                             </li> 
                         </Link>                  
                     </ul> 
-                    <a className="navbar-brand  ">Energia Eolica</a>   
+                    <h4 className="navbar-brand  ">Energia Eolica</h4>   
                 </nav>  
                 <EolicaUno/>   
                 <EolicaDos/>
@@ -29,7 +29,7 @@ const Solar = () => {
     )
 }
 
-export default Solar
+export default Eolica
 
 const styles={
     contain:{
