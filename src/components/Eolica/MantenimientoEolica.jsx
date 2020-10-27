@@ -209,7 +209,8 @@ const [props6, set6, stop6] = useSpring(() => ({opacity: 0}))
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Aprende mas acerca de un aerogenerador                              
+                                    ¿Quieres aprender mas sobre el mantenimiento?
+                                    Conectate a internet y da click aqui                          
                                     </a>
                                     <br/>
                                     
@@ -219,7 +220,7 @@ const [props6, set6, stop6] = useSpring(() => ({opacity: 0}))
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Mas...                            
+                                    Y aqui...                            
                                     </a>
                           <br/>
                             <Link to="media-eolica" >

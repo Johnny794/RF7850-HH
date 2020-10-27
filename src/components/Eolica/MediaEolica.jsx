@@ -210,7 +210,7 @@ const styles = {
     },
     card:{
         marginBottom:5,
-        height:450
+        height:520
     },
     pieza:{
         width:100,

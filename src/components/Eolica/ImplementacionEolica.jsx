@@ -71,11 +71,13 @@ const ImplementacionEolica = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Mira la implementacion de un aerogenerador                              
+                                      
+                                    ¿Quieres aprender mas sobre la implementacion de un aerogenerador?
+                                    Conectate a internet y da click aqui                             
                                     </a>
                           
                             <Link to="mantenimiento-eolica" >
-                                        <button type="button" className="btn btn-primary btn-sm" >Ver Mantenimiento <BsArrowRight/> </button>
+                                        <button type="button" className="btn btn-primary btn-sm ml-5" >Ver Mantenimiento <BsArrowRight/> </button>
                             </Link>
                      </div>       
             </div> 

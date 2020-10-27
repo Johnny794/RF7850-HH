@@ -123,7 +123,7 @@ export default class Media extends Component {
                       <div className="row mt-5"> 
                         <div className= "col">
                           <div className="wrapper">
-                              <img src="./psolar.jpg" className="App-logo" alt="logo" />
+                              <img src="./pasolar.jpg" className="App-logo" alt="logo" />
                           </div>
                         </div>
                         <div className="col">
@@ -209,7 +209,7 @@ const styles = {
     },
     card:{
         marginBottom:5,
-        height:480
+        height:520
     },
     pieza:{
         width:100,

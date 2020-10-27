@@ -84,9 +84,22 @@ finishHandler =() => {
     }
 
 }
+
+repeat =() => { 
+    const {currentIndex} = this.state //get the current index
+    this.setState({
+            quizEnd:false,
+            currentIndex:0,
+            question: QuizData[currentIndex].question,
+            options : QuizData[currentIndex].options,
+            answer: QuizData[currentIndex].answer 
+        })       
+         
+
+}
     render() {
         const {question, options, currentIndex, userAnswer, quizEnd} = this.state //get the current state       
-        if(quizEnd) {
+        /*if(quizEnd) {
             return (
                 <div className="card text-white bg-dark " >
                     <h4 className="mt-2 align-self-center " >Resuelve este sencillo test</h4> 
@@ -113,32 +126,50 @@ finishHandler =() => {
 
                
             )
-        }
+        }*/
         return (
             <div style={styles.contain} > 
                 <div className="card text-white bg-dark " >
+                <h4 className="mt-2 align-self-center " >Resuelve este sencillo test</h4>
                     <div className="card-body d-flex justify-content-center  ">
                         <div className="row">
                             <div className="col">
-                                <div className="card text-dark bg-white" style={styles.cardq} >
+                                { this.state.quizEnd ?
+                                 <div className="card text-dark bg-white" style={styles.cardq} >      
+                                    <h1 className="m-2 text-center text-success" >Prueba finalizada. </h1>
+                                        <h2 className="text-center text-info" >Obtuviste {this.state.score} punto(s)</h2>
+                                        <p className="m-1" >Las respuestas correctas son: </p>
+                                        <ul>
+                                            {QuizData.map((item, index) => (
+                                                <li className='options'
+                                                    key={index}>
+                                                    {item.answer}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    <button  
+                                        className="btn btn-primary"
+                                        onClick= {() => this.repeat()}>Repetir
+                                    </button>                                  
+                                </div> :<div className="card text-dark bg-white" style={styles.cardq} >
                                     <h2 className="m-2 text-center">{question}</h2>
                                     <span className="text-center" >{`Pregunta ${currentIndex+1} de ${QuizData.length}`}</span>
-                                        {options.map((option) => (  //for each option, new paragraph
-                                        <ul className="mt-1" key={option}  >
+                                        {options.map((option, key) => (  //for each option, new paragraph
+                                        <ul className="mt-1" key={key}  >
                                             <button  
-                                                className={`options ${userAnswer === option ? "selected" : null} 
-                                                        btn btn-primary` }
-                                                onClick= {() => this.checkAnswer(option)}>
+                                                className={`btn btn-primary ${userAnswer === option ? "btn btn-success" : null} 
+                                                         text-justify mr-2 ` }
+                                                disabled = {this.state.disabled2}      
+                                                onClick= {() => this.checkAnswer(option, key) }>
                                                 {option}
-                                            </button>
-                                            
+                                            </button>                                           
                                         </ul>
                                         
                                     ))}
                                     {currentIndex < QuizData.length -1 &&  
                                     // Next button only displays if the above is true
                                     <button 
-                                        className="ui inverted button btn btn-secondary text-ligth " 
+                                        className="ui inverted button btn btn-success text-ligth " 
                                         disabled = {this.state.disabled}
                                         onClick = {this.nextQuestionHander}
                                         >Siguiente pregunta</button>
@@ -150,7 +181,7 @@ finishHandler =() => {
                                         onClick = {this.finishHandler}
                                         >Finish</button>
                                     }
-                                </div>
+                                </div>}
                         </div>                  
                     </div>        
                 </div>    

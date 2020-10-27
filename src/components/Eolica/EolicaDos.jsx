@@ -21,7 +21,8 @@ const EolicaDos = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Mira aqui todas las partes de un aerogenerador                              
+                                    ¿Quieres conocer todas las partes de un aerogenerador?
+                                    Conectate a internet y da click aqui                              
                                     </a>
                             </div> 
                             <Link to="implementacion-eolica" className='m-5' >

@@ -181,7 +181,8 @@ function fadeIn(e) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Mas acerca de los sistemas fotovoltaicos                              
+                                    ¿Quieres conocer mas acerca de los sistemas fotovoltaicos?
+                                    Conectate a internet y da click aqui                                
                                     </a>
                             </div> 
                             <Link to="implementacion-solar" className='m-5' >

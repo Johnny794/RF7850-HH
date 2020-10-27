@@ -96,7 +96,8 @@ const ImplementacionEolica = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Mira sobre el mantenimiento aqui                              
+                                    ¿Quieres conocer mas acerca del mantenimiento de un sistema fotovoltaico?
+                                    Conectate a internet y da click aqui 
                                     </a>
                           
                             <Link to="media-solar" >

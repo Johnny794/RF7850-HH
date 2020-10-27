@@ -103,7 +103,8 @@ const ImplementacionEolica = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
-                                    Implementacion de un sistema solar                              
+                                    ¿Quieres conocer mas acerca de la implementacion de un sistema fotovoltaico?
+                                    Conectate a internet y da click aqui                             
                                     </a> 
                                                     
                                 <Link to="mantenimiento-solar" >
