@@ -2,6 +2,8 @@ import React from "react";
 import Animacion from "./Animacion"
 import Click from './click'
 import {useSpring, animated} from 'react-spring'
+import {Link} from 'react-router-dom';
+import SolarSteps from './SolarSteps'
 
 const EolicaUno = () => {
 
@@ -37,10 +39,15 @@ function fade(e) {
                                 </animated.div> 
                             </div>
                         </div>
-                        
+                    <SolarSteps/>     
                 </div>
                 <div className="col"> 
                     <Animacion/>
+                    <div style={{marginTop:25, marginLeft:100}} >
+                        <Link c to = "/funcionamiento-solar">
+                            <a className="btn btn-primary btn-sm">AQUI PUEDES VER SU FUNCIONAMIENTO</a> 
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>    

@@ -1,13 +1,24 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Click from './click'
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 
 const EolicaDos = () => {
     return (
         <div>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <ul className="navbar-nav mr-auto ">
+                        <Link to = "/eolica">
+                            <li className="nav-item active">
+                                <button className="btn btn-primary btn-sm"><BsArrowLeft/>Atras</button>
+                            </li>
+                        </Link>                 
+                    </ul> 
+                    <h4 className="navbar-brand  ">Energia Eolica</h4>
+                </nav> 
             <div style={styles.card} className="card text-white bg-dark ">  
+            <h4 className="mt-2 align-self-center " > EL AEROGENERADOR </h4> 
                 <div className="card-body">   
                     <div className="row"> 
                         <div className="col"> 

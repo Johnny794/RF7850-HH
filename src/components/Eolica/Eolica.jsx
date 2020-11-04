@@ -2,8 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import { BsArrowLeft } from "react-icons/bs";
 
-import EolicaDos from './EolicaDos'
 import EolicaUno from './EolicaUno'
+import EolicSteps from './EolicSteps'
 
 
 
@@ -22,8 +22,7 @@ const Eolica = () => {
                     </ul> 
                     <h4 className="navbar-brand  ">Energia Eolica</h4>   
                 </nav>  
-                <EolicaUno/>   
-                <EolicaDos/>
+                <EolicaUno/>         
             </div>
         </div>             
     )

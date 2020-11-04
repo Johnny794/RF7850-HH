@@ -82,6 +82,7 @@ finishHandler =() => {
             quizEnd:true
         })       
     }
+    console.log(this.state.score);
 
 }
 
@@ -92,7 +93,8 @@ repeat =() => {
             currentIndex:0,
             question: QuizData[currentIndex].question,
             options : QuizData[currentIndex].options,
-            answer: QuizData[currentIndex].answer 
+            answer: QuizData[currentIndex].answer,
+            score:0
         })       
          
 

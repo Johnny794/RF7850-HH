@@ -1,6 +1,10 @@
 import React from "react";
 import Animacion from "./Animacion"
+import WindAnimation from './windAnimation'
 import {useSpring, animated} from 'react-spring'
+import {Link} from 'react-router-dom';
+import Click from './click'
+import EolicSteps from './EolicSteps'
 
 const EolicaUno = () => {
 
@@ -15,13 +19,17 @@ function fade(e) {
         <h4 className="mt-2 align-self-center " > Energia Eolica </h4> 
         <div className="card-body">   
             <div className="row"> 
-                <div className="col">                  
-                    <div className="row d-flex align-self-center" >
+                <div className="col"> 
+                    <Animacion/>
+                    <EolicSteps/>
+                </div>
+                <div className="col">
+                    <Click/>  
+                        <div className="row d-flex align-self-center" >                        
                             <div className="col" >
                                 <button className="btn btn-primary btn-sm mb-5 " onClick={fade}>¿Ques es?</button> 
                             </div>
-             
-                            <div className="col" >
+                            <div>
                                 <animated.div style={props} className='mt-2' >
                                     <div className="card text-white bg-primary mb-1 d-inline-block" style={styles.cardtwo} > 
                                         <div className="card-body border border-primary">
@@ -31,13 +39,16 @@ function fade(e) {
                                         energía eléctrica.
                                         </div>
                                     </div>
+                                    <div style={{marginTop:25}} >
+                                        <Link c to = "/eolica-generador">
+                                            <a className="btn btn-primary btn-sm">AQUI PUEDES CONOCER UN AEROGENERADOR</a> 
+                                        </Link>
+                                    </div>
                                 </animated.div> 
+                                <WindAnimation style={{zIndex:2}} />
                             </div>
                         </div>
                         
-                </div>
-                <div className="col"> 
-                    <Animacion/>
                 </div>
             </div>
         </div>    

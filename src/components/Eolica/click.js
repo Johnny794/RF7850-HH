@@ -17,7 +17,7 @@ export default function App() {
 
 	    options={defaultOptions}
       marginLeft={50}
-      marginTop={100}
+      marginTop={110}
       width={100}
       height={100}
       
@@ -33,7 +33,7 @@ const styles={
       alignItems: 'flex-start',
       justifyContent: 'center',
       zIndex:2,
-      marginBottom:20
+      marginBottom:9
       
     }
 }

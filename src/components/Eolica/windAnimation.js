@@ -3,24 +3,30 @@ import Lottie from 'react-lottie';
 //import animationData from "./eolic"
 
 export default function App() {
-  const defaultOptions = {
+  
+    const defaultOptions = {
       loop: true,
       autoplay: true,
-      animationData: require('../../Lotties/eolic.json'),
+      animationData: require('../../Lotties/wind.json'),
       rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
+        preserveAspectRatio: "xMidYMid slice"
       }
     };
-    
   
   return (
-    <div>
+    <div style={styles.view} >
         <Lottie 
 	        options={defaultOptions}
-          height={200}
-          width={200}
+          height={400}
+          width={400}
           backgroundColor='white'
-        />  
+        /> 
     </div>
   );
+}
+
+const styles={
+    view:{ 
+      zIndex:2,   
+    }
 }

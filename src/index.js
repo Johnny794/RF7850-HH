@@ -16,6 +16,8 @@ import ImplementacionSolar from './components/Solar/ImplementacionSolar.jsx';
 import MantenimientoSolar from './components/Solar/MantenimientoSolar.jsx';
 import MediaEolica from './components/Eolica/MediaEolica'
 import MediaSolar from './components/Solar/MediaSolar'
+import EolicaDos from './components/Eolica/EolicaDos.jsx'
+import FuncSolar from './components/Solar/FuncionamientoSolar.jsx'
 
 ReactDOM.render(
     <Router>
@@ -27,10 +29,12 @@ ReactDOM.render(
                 <Route exact path = '/solar' component={Solar}/> 
                 <Route exact path = '/implementacion-eolica' component={ImplementacionEolica}/>
                 <Route exact path = '/mantenimiento-eolica' component={MantenimientoEolica}/>
+                <Route exact path = '/eolica-generador' component={EolicaDos}/>
                 <Route exact path = '/implementacion-solar' component={ImplementacionSolar}/>
                 <Route exact path = '/mantenimiento-solar' component={MantenimientoSolar}/>
                 <Route exact path = '/media-eolica' component={MediaEolica}/>
                 <Route exact path = '/media-solar' component={MediaSolar}/>
+                <Route exact path = '/funcionamiento-solar' component={FuncSolar}/>
             </main>
         </div>
     </Router>, 
