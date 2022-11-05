@@ -28,7 +28,7 @@ ReactDOM.render(
                 <Route exact path = '/eolica' component={Eolica}/> 
                 <Route exact path = '/solar' component={Solar}/> 
                 <Route exact path = '/implementacion-eolica' component={ImplementacionEolica}/>
-                <Route exact path = '/mantenimiento-eolica' component={MantenimientoEolica}/>
+                 <Route exact path = '/mantenimiento-eolica' component={MantenimientoEolica}/>
                 <Route exact path = '/eolica-generador' component={EolicaDos}/>
                 <Route exact path = '/implementacion-solar' component={ImplementacionSolar}/>
                 <Route exact path = '/mantenimiento-solar' component={MantenimientoSolar}/>

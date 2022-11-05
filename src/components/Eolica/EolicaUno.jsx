@@ -16,7 +16,7 @@ function fade(e) {
 
   return (
     <div style={styles.card} className="card text-white bg-dark "> 
-        <h4 className="mt-2 align-self-center " > Energia Eolica </h4> 
+        <h4 className="mt-2 align-self-center " >RADIO HARRIS RF-7850M</h4> 
         <div className="card-body">   
             <div className="row"> 
                 <div className="col"> 

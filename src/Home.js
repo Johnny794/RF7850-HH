@@ -19,33 +19,58 @@ function Home() {
             </Link>
             </ul>
             <div className="alert alert-primary" role="alert">
-                    <h2>Energias Renovables: La mejor manera de salvar el planeta </h2>
+                    <h2>MODULOS DE APRENDIZAJE </h2>
             </div>  
-            <Animation/>   
+            {/*<Animation/>
             <div className="alert alert-primary mt-1 row">
                 <h2>Da click en la imagen y aprende sobre ellas</h2>
                 <Down/>
-            </div>
+            </div>*/}
              
             <div className="container">
                 <div  className="row ">
                     <div  className="col-sm mt-5 ">
-                        <Link to = "/eolica" 
+                        <Link to = "/HOME" 
                             data-toggle="tooltip" 
                             data-placement="top" 
-                            title="Energia Eolica" >
-                            <img src="./assets/eolica.jpg" 
+                            title="Operación" >
+                            <img src="./assets/operacion21.png" 
                             alt="Energia Eolica" 
                             className="eolica rounded-circle float-left btn btn-outline-dark"/>                          
                         </Link>
                     </div>
                     
                     <div className="col-sm mt-5  ">
-                        <Link to = "/solar" 
+                        <Link to = "/HOME" 
                             data-toggle="tooltip" 
                             data-placement="top" 
-                            title="Energia Solar">  
-                            <img src="./assets/solar.jpg" 
+                            title="Componentes">  
+                            <img src="./assets/componentes12.png" 
+                            alt="Energia Fotovoltaica" 
+                            className="solar rounded-circle float-right btn btn-outline-dark" />
+                        </Link>
+                    </div>  
+                </div>    
+            </div>
+            <div className="container">
+                <div  className="row ">
+                    <div  className="col-sm mt-5 ">
+                        <Link to = "/HOME" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Programación" >
+                            <img src="./assets/programacion12.png" 
+                            alt="Energia Eolica" 
+                            className="eolica rounded-circle float-left btn btn-outline-dark"/>                          
+                        </Link>
+                    </div>
+                    
+                    <div className="col-sm mt-5  ">
+                        <Link to = "/HOME" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Quicklock">  
+                            <img src="./assets/quicklock12.png" 
                             alt="Energia Fotovoltaica" 
                             className="solar rounded-circle float-right btn btn-outline-dark" />
                         </Link>
