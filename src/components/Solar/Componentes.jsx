@@ -44,7 +44,7 @@ function fadeIn(e) {
                             </li> 
                         </Link>                  
                     </ul> 
-                    <h4 className="navbar-brand  ">RADIO HARRIS RF-7850M</h4>   
+                    <h4 className="navbar-brand  ">COMPONENTES RADIO HARRIS RF-7850M</h4>   
                 </nav>  
                 <SolarUno/>   
                 {/*<EolicaDos/>*/}

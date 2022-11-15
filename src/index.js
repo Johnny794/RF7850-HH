@@ -8,10 +8,11 @@ import'mdbreact/dist/css/mdb.css';
 
 import Inicio from "./App"
 import Home from "./Home"
-import Eolica from './components//Eolica/Eolica.jsx';
-import Solar from './components/Solar/Solar.jsx';
-import ImplementacionEolica from './components/Eolica/ImplementacionEolica.jsx';
-import MantenimientoEolica from './components/Eolica/MantenimientoEolica.jsx';
+import Operacion from './components/Eolica/Operacion.jsx';
+import Componentes from './components/Solar/Componentes.jsx';
+import Programacion from './components/Eolica/Programacion.jsx';
+import ProgramacionDos from './components/Eolica/ProgramacionDos.jsx';
+import Quicklook from './components/Eolica/Quicklook.jsx';
 import ImplementacionSolar from './components/Solar/ImplementacionSolar.jsx';
 import MantenimientoSolar from './components/Solar/MantenimientoSolar.jsx';
 import MediaEolica from './components/Eolica/MediaEolica'
@@ -25,16 +26,11 @@ ReactDOM.render(
             <main>
                 <Route exact path="/" component={Inicio} />
                 <Route path="/home" component={Home} />
-                <Route exact path = '/eolica' component={Eolica}/> 
-                <Route exact path = '/solar' component={Solar}/> 
-                <Route exact path = '/implementacion-eolica' component={ImplementacionEolica}/>
-                 <Route exact path = '/mantenimiento-eolica' component={MantenimientoEolica}/>
-                <Route exact path = '/eolica-generador' component={EolicaDos}/>
-                <Route exact path = '/implementacion-solar' component={ImplementacionSolar}/>
-                <Route exact path = '/mantenimiento-solar' component={MantenimientoSolar}/>
-                <Route exact path = '/media-eolica' component={MediaEolica}/>
-                <Route exact path = '/media-solar' component={MediaSolar}/>
-                <Route exact path = '/funcionamiento-solar' component={FuncSolar}/>
+                <Route exact path = '/operacion' component={Operacion}/> 
+                <Route exact path = '/componentes' component={Componentes}/> 
+                <Route exact path = '/programacion' component={Programacion}/>
+                <Route exact path = '/net-manager' component={ProgramacionDos}/>
+                <Route exact path = '/quicklook' component={Quicklook}/>                
             </main>
         </div>
     </Router>, 

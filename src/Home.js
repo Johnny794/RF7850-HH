@@ -12,7 +12,7 @@ function Home() {
             <ul className="navbar-nav mr-auto" >
             <Link to = "/">
                 <li className="nav-item active m-1 ">
-                    <button className="btn btn-primary btn-sm">
+                    <button className="btn btn-primary btn-sm" >
                         <BsArrowLeft/>Atras
                     </button>
                 </li> 
@@ -30,7 +30,7 @@ function Home() {
             <div className="container">
                 <div  className="row ">
                     <div  className="col-sm mt-5 ">
-                        <Link to = "/HOME" 
+                        <Link to = "/operacion" 
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Operación" >
@@ -41,7 +41,7 @@ function Home() {
                     </div>
                     
                     <div className="col-sm mt-5  ">
-                        <Link to = "/HOME" 
+                        <Link to = "/componentes" 
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Componentes">  
@@ -55,7 +55,7 @@ function Home() {
             <div className="container">
                 <div  className="row ">
                     <div  className="col-sm mt-5 ">
-                        <Link to = "/HOME" 
+                        <Link to = "/programacion" 
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Programación" >
@@ -66,7 +66,7 @@ function Home() {
                     </div>
                     
                     <div className="col-sm mt-5  ">
-                        <Link to = "/HOME" 
+                        <Link to = "/quicklook" 
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Quicklock">  

@@ -20,7 +20,7 @@ const Eolica = () => {
                             </li> 
                         </Link>                  
                     </ul> 
-                    <h4 className="navbar-brand  ">RADIO HARRIS RF-7850M</h4>   
+                    <h4 className="navbar-brand  ">OPERACIÓN RADIO HARRIS RF-7850M</h4>   
                 </nav>  
                 <EolicaUno/>         
             </div>

@@ -15,41 +15,25 @@ function fade(e) {
 
   return (
     <div style={styles.card} className="card text-white bg-dark "> 
-        <h4 className="mt-2 align-self-center " >Sistema Fotoelectrico </h4> 
-        <div className="card-body">   
-            <div className="row"> 
-                <div className="col">  
-                <Click/>                
-                    <div className="row d-flex align-self-center" >
-                            
-                            <div className="col" >
-                                <button className="btn btn-primary btn-sm mb-5 " onClick={fade}>¿Ques es?</button> 
-                            </div>
-             
-                            <div className="col" >
-                                <animated.div style={props} className='mt-2' >
-                                    <div className="card text-white bg-primary mb-1 d-inline-block" style={styles.cardtwo} > 
-                                        <div className="card-body border border-primary">
-                                        Es un sistema que consiste en la integración de varios componentes, 
-                                                    cada uno de ellos cumpliendo con una o más funciones específicas, a fin de 
-                                                    que éste pueda suplir la demanda de energía eléctrica requerida por el tipo de carga, 
-                                                    usando la energía de la radiación solar para convertirla en energía eléctrica.
-                                        </div>
-                                    </div>
-                                </animated.div> 
-                            </div>
-                        </div>
-                    <SolarSteps/>     
-                </div>
-                <div className="col"> 
-                    <Animacion/>
-                    <div style={{marginTop:25, marginLeft:100}} >
-                        <Link c to = "/funcionamiento-solar">
-                            <a className="btn btn-primary btn-sm">AQUI PUEDES VER SU FUNCIONAMIENTO</a> 
-                        </Link>
-                    </div>
-                </div>
-            </div>
+        <h4 className="mt-2 align-self-center " >Componentes</h4> 
+        <div className="card-bod row d-flex " >  
+            <ul style={{margin:'5% 12% 0 13%'}} >
+                <li>Cuerpo del radio</li>
+                <li>Bateía recargable</li> 
+                <li>Antena GPS</li>
+                <li>Antena multibanda</li>
+                <li>Protector de programación</li>
+                <li>Display</li>
+                <li>Perilla de canales</li>
+                <li>Toma de audio</li>
+                <li>Conector de antena (Multibanda - Antena SATCOM)</li>
+                <li>Parlante</li>
+                <li>Micrófono</li>
+                <li>CDS (Software de programación)</li>
+            </ul>             
+            <div className="col">                        
+                <img src="./assets/rf1.png" style={{margin:'10% 40% 0 20%'}} />                                                      
+            </div>                                                                
         </div>    
     </div>            
   );
@@ -63,6 +47,7 @@ const styles={
     },
     card:{
         margin:5,
+        height:'800px'      
     },
     image:{
         width:400
