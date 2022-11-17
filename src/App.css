@@ -47,10 +47,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 328px;
-  max-width: 400px;
-  min-height: 325px;
-  max-height: 400px;
+  min-width: 343px;
+  max-width: 150px;
+  min-height: 310px;
+  max-height: 150px;
   align-content: stretch;
 }
 
@@ -61,53 +61,29 @@
   background: green;
 }
 .multibox .box.img_1 {
- background-image: url('./images/9.jpg')
+ background-image: url('./images/9.png')
 }
 .multibox .box.img_2 {
- background-image: url('./images/2.jpg')
+ background-image: url('./images/2.png')
 }
 .multibox .box.img_3 {
- background-image: url('./images/3.jpg')
+ background-image: url('./images/3.png')
 }
 .multibox .box.img_4 {
- background-image: url('./images/4.jpg')
+ background-image: url('./images/4.png')
 }
 .multibox .box.img_5 {
- background-image: url('./images/5.jpg')
+ background-image: url('./images/5.png')
 }
 .multibox .box.img_6 {
- background-image: url('./images/6.jpg')
+ background-image: url('./images/6.png')
 }
 .multibox .box.img_7 {
- background-image: url('./images/7.jpg')
+ background-image: url('./images/7.png')
 }
 .multibox .box.img_8 {
- background-image: url('./images/8.jpg')
+ background-image: url('./images/8.png')
 }
-.multibox .box.img_a {
-  background-image: url('./images/c.jpg')
- }
- .multibox .box.img_b {
-  background-image: url('./images/b.jpg')
- }
- .multibox .box.img_c {
-  background-image: url('./images/d.jpg')
- }
- .multibox .box.img_d {
-  background-image: url('./images/e.jpg')
- }
- .multibox .box.img_e {
-  background-image: url('./images/f.jpg')
- }
- .multibox .box.img_f {
-  background-image: url('./images/g.jpg')
- }
- .multibox .box.img_g {
-  background-image: url('./images/h.jpg')
- }
- .multibox .box.img_h {
-  background-image: url('./images/i.jpg')
- }
 .multibox .box.orange {
  background: orange;
 }

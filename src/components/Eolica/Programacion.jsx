@@ -15,7 +15,7 @@ const ImplementacionEolica = () => {
                     <Link to = "/home">
                         <li className="nav-item active">
                             <button className="btn btn-primary btn-sm">
-                                <BsArrowLeft/>Atras
+                                Atras
                             </button>
                         </li> 
                     </Link> 
@@ -75,9 +75,10 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 <div >
                                     <img src="./assets/k4.png" style={{margin:'0% 0% 0% 43%'}} />                          
-                                </div>                                  
-                            <div className="col" >
-                                <Link 
+                                </div>  
+
+                                <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'space-between', padding:'15px', fontSize:'15px'}} >
+                                 <Link 
                                     className="btn btn-primary btn-sm mb-5 "
                                     to = "home"    >                                
                                     Atras
@@ -87,7 +88,7 @@ const ImplementacionEolica = () => {
                                     to = "net-manager"    >                                
                                 Siguiente
                                 </Link> 
-                            </div>  
+                                </div>                                                             
                             </div>                                                                                                                                                                                             
                         </div>                                                                  
                     </div> 

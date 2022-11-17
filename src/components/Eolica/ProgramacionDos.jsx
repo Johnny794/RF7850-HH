@@ -1,10 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { BsArrowLeft } from "react-icons/bs";
-import { FiCornerRightUp } from "react-icons/fi";
-import Turbina from './turbina'
-import { BsArrowRight } from "react-icons/bs";
-import Click from './click'
+import { AiFillEdit } from "react-icons/ai";
 
 
 const ImplementacionEolica = () => {
@@ -15,7 +12,7 @@ const ImplementacionEolica = () => {
                     <Link to = "/programacion">
                         <li className="nav-item active">
                             <button className="btn btn-primary btn-sm">
-                                <BsArrowLeft/>Atras
+                                Atras
                             </button>
                         </li> 
                     </Link> 
@@ -92,11 +89,19 @@ const ImplementacionEolica = () => {
                                     <img src="./assets/n7.png" style={{margin:'1% 0% 0% 44%'}} />                          
                                 </div>  
 
+                                
+                                <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'space-between', padding:'15px', fontSize:'15px', margin:'40px 15px 40px 15px'}} >
                                 <Link to = "/programacion">                                   
                                     <button className="btn btn-primary btn-sm">
-                                        <BsArrowLeft/>Atras
+                                        Atras
                                     </button>                                    
-                                </Link>                             
+                                </Link> 
+                                <Link to = "/prog-quiz" >        
+                                    <button style={{color:'white'}} className="btn btn-primary btn-sm" > < AiFillEdit style={{margin:'2px', fontSize:'10px'}}/>
+                                     Test
+                                    </button>          
+                                </Link> 
+                                </div>                            
                             </div>                                                                                                                                                                                             
                         </div>                                                                  
                     </div> 

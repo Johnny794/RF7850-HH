@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowLeft} from "react-icons/bs";
 
-import EolicaUno from './EolicaUno'
+import OperCarac from './OperCarac'
 import EolicSteps from './EolicSteps'
 
 
@@ -16,13 +16,13 @@ const Eolica = () => {
                     <ul className="navbar-nav mr-auto ">
                         <Link to = "/home">
                             <li className="nav-item active">
-                                <button className="btn btn-primary btn-sm"><BsArrowLeft/>Atras</button>
+                                <button className="btn btn-primary btn-sm">Atras</button>
                             </li> 
                         </Link>                  
                     </ul> 
                     <h4 className="navbar-brand  ">OPERACIÓN RADIO HARRIS RF-7850M</h4>   
                 </nav>  
-                <EolicaUno/>         
+                <OperCarac/>         
             </div>
         </div>             
     )

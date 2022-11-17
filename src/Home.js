@@ -13,7 +13,7 @@ function Home() {
             <Link to = "/">
                 <li className="nav-item active m-1 ">
                     <button className="btn btn-primary btn-sm" >
-                        <BsArrowLeft/>Atras
+                        Atras
                     </button>
                 </li> 
             </Link>
@@ -52,6 +52,20 @@ function Home() {
                     </div>  
                 </div>    
             </div>
+
+            <div className="container">
+                <div style={{display:'flex', alignItems:'center', justifyContent:'center'}} >                    
+                    <Link to = "/rompecabezas" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Programación">
+                            <button style={{color:'white'}} className="rounded-circle btn btn-outline-yellow" >
+                                    juega
+                            </button>                                                                             
+                    </Link>                                                     
+                </div>    
+            </div>
+
             <div className="container">
                 <div  className="row ">
                     <div  className="col-sm mt-5 ">

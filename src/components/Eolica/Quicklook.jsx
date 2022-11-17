@@ -1,10 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import { BsArrowLeft } from "react-icons/bs";
-import { FiCornerRightUp } from "react-icons/fi";
-import Turbina from './turbina'
-import { BsArrowRight } from "react-icons/bs";
-import Click from './click'
+import { AiFillEdit } from "react-icons/ai";
 
 
 const ImplementacionEolica = () => {
@@ -15,12 +12,12 @@ const ImplementacionEolica = () => {
                     <Link to = "/home">
                         <li className="nav-item active">
                             <button className="btn btn-primary btn-sm">
-                                <BsArrowLeft/>Atras
+                                Atras
                             </button>
                         </li> 
                     </Link> 
                 </ul> 
-                <h4 className="navbar-brand  ">PROGRAMACIÓN RADIO HARRIS RF-7850M</h4>   
+                <h4 className="navbar-brand  ">CONFIGURACION EN QUICKLOOK RADIO HARRIS RF-7850M</h4>   
             </nav>
             <div style={styles.card} className="card m-1 text-white bg-dark" >
                 <h4 className="mt-2 align-self-center " > CONFIGURACION DE UN PRESET EN QUICKLOOK (VISTA RAPIDA) </h4>
@@ -134,11 +131,19 @@ const ImplementacionEolica = () => {
                                     <img src="./assets/q11.png" style={{margin:'0% 0% 0% 30%'}} /> 
                                     <img src="./assets/q12.png" style={{margin:'1% 0% 0% 32%'}} />                                                              
                                 </div> 
+                                 
+                                <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'space-between', padding:'15px', fontSize:'15px', margin:'40px 15px 40px 15px'}} >
                                 <Link to = "/home">                        
                                     <button className="btn btn-primary btn-sm">
-                                        <BsArrowLeft/>Atras
+                                        Atras
                                     </button>                    
-                                </Link>                                                                                                                           
+                                </Link> 
+                                <Link to = "/quick-quiz" >        
+                                    <button style={{color:'white'}} className="btn btn-primary btn-sm" > < AiFillEdit style={{margin:'2px', fontSize:'10px'}}/>
+                                     Test
+                                    </button>          
+                                </Link> 
+                                </div>                                                                                                                          
                             </div> 
 
                         </div>                                                                  
