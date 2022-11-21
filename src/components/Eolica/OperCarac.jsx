@@ -13,7 +13,6 @@ import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
 import { AiFillEdit } from "react-icons/ai";
 
-
 const EolicaUno = () => {
 
 const [props, set, stop] = useSpring(() => ({position:'relative', zIndex:1}))
@@ -39,10 +38,7 @@ function fade(e) {
 
   return (
     <div className="card text-white bg-dark mt-1 " style={{height:900}} >                 
-        <h4 className="mt-2 align-self-center " style={{margin:'50px'}} >RADIO HARRIS RF-7850M</h4>                                         
-        <div>
-          
-        </div>    
+        <h4 className="mt-2 align-self-center " style={{margin:'50px'}} >RADIO HARRIS RF-7850M</h4>                                                     
         <div className="row d-flex"  style={{justifyContent:'space-evenly'}} >                                                                                       
             <div className="card text-white bg-primary mb-1 d-inline-block" style={styles.cardtwo} > 
                 <div className="card-body ">

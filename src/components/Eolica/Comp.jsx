@@ -15,7 +15,7 @@ function fade(e) {
   return (
     <div style={styles.card} className="card text-white bg-dark "> 
         <div className="row justify-content-center" >
-            <h4 className="m-4 align-self-center " >Componentes</h4> 
+            <h4 className="m-4 align-self-center " >COMPONENTES</h4> 
             <CompAnim/>
         </div>
         <div className="card-body row d-flex align-items-center" style={{justifyContent:'space-evenly'}}  >  
