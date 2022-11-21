@@ -129,12 +129,12 @@ repeat =() => {
                                     </button>                                  
                                 </div> :<div className="card text-dark bg-white" style={styles.cardq} >
                                     <h2 className="m-2 text-center">{question}</h2>
-                                    <span className="text-center" >{`Pregunta ${currentIndex+1} de ${CompQuizData.length}`}</span>
+                                    <span className="text-center" >{`Pregunta ${currentIndex+1} de ${CompQuizData.length} - F o V`}</span>
                                         {options.map((option, key) => (  //for each option, new paragraph
                                         <ul className="mt-1" key={key}  >
                                             <button  
                                                 className={`btn btn-primary ${userAnswer === option ? "btn btn-success" : null} 
-                                                         text-justify mr-2 ` }
+                                                         text-justify mr-5 ` }
                                                 disabled = {this.state.disabled2}      
                                                 onClick= {() => this.checkAnswer(option, key) }>
                                                 {option}
@@ -182,5 +182,9 @@ const styles = {
     },
     cardq:{
         width:500,
+        height:400,
+        display:'flex',       
+        alignItems:'center',
+        justifyContent:'space-evely'
     }
 }

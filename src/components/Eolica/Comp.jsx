@@ -2,6 +2,7 @@ import React from "react";
 import {useSpring} from 'react-spring'
 import {Link} from 'react-router-dom';
 import { AiFillEdit } from "react-icons/ai";
+import CompAnim from './compAnim'
 
 const EolicaUno = () => {
 
@@ -13,24 +14,29 @@ function fade(e) {
 
   return (
     <div style={styles.card} className="card text-white bg-dark "> 
-        <h4 className="mt-2 align-self-center " >Componentes</h4> 
-        <div className="card-bod row d-flex " >  
-            <ul style={{margin:'5% 12% 0 13%'}} >
-                <li>Cuerpo del radio</li>
-                <li>Batería recargable</li> 
-                <li>Antena GPS</li>
-                <li>Antena multibanda</li>
-                <li>Protector de programación</li>
-                <li>Display</li>
-                <li>Perilla de canales</li>
-                <li>Toma de audio</li>
-                <li>Conector de antena (Multibanda - Antena SATCOM)</li>
-                <li>Parlante</li>
-                <li>Micrófono</li>
-                <li>CDS (Software de programación)</li>
-            </ul>             
-            <div className="col">                        
-                <img src="./assets/rf1.png" style={{margin:'10% 40% 0 20%'}} />                                                      
+        <div className="row justify-content-center" >
+            <h4 className="m-4 align-self-center " >Componentes</h4> 
+            <CompAnim/>
+        </div>
+        <div className="card-body row d-flex align-items-center" style={{justifyContent:'space-evenly'}}  >  
+            <div className="alert alert-primary" >
+                <ul>
+                    <li>Cuerpo del radio</li>
+                    <li>Batería recargable</li> 
+                    <li>Antena GPS</li>
+                    <li>Antena multibanda</li>
+                    <li>Protector de programación</li>
+                    <li>Display</li>
+                    <li>Perilla de canales</li>
+                    <li>Toma de audio</li>
+                    <li>Conector de antena (Multibanda - Antena SATCOM)</li>
+                    <li>Parlante</li>
+                    <li>Micrófono</li>
+                    <li>CDS (Software de programación)</li>
+                </ul>    
+            </div>             
+            <div >                        
+                <img src="./assets/rf1.png" />                                                      
             </div>                                                                             
         </div> 
         <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'end', padding:'15px', fontSize:'15px', margin:'40px 15px 40px 15px'}} >

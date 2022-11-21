@@ -104,7 +104,7 @@ export default class Media extends Component {
             <div style={styles.contain} >
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <ul className="navbar-nav mr-auto ">
-                        <Link to = "/operacion">
+                        <Link to = "/componentes">
                             <li className="nav-item active">
                                 <button className="btn btn-primary btn-sm">Atras</button>
                             </li>
