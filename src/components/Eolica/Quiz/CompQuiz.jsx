@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import {CompQuizData} from './CompQuizData'
 import { BsArrowCounterclockwise } from "react-icons/bs";
+import Dialog from "@material-ui/core/Dialog";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import Button from "@material-ui/core/Button";
+import CongratsAnim from "./congratsAnim"
 
 export default class Quiz extends Component {
 
@@ -13,12 +19,36 @@ export default class Quiz extends Component {
         quizEnd: false, //True if it's the last question
         score: 0,      //the Score
         disabled: true,
+        openDialog: false,
+        selectedAnswer: false       
     }
-  }
-
-  loadQuiz = () => {
-    const {currentIndex} = this.state //get the current index
+  }  
+  
+  handleClickToOpen = () => {
+    console.log("open")
+    //const {openDialog} = this.state //get the current state
     this.setState(() => {
+        return {
+            openDialog: true   
+        }
+    }
+    )    
+  };
+  
+  handleToClose = () => {
+    console.log("close")
+    //const {openDialog} = this.state //get the current state
+    this.setState(() => {
+        return {
+            openDialog: false   
+        }
+    }
+    ) 
+  };
+
+    loadQuiz = () => {
+        const {currentIndex} = this.state //get the current index
+        this.setState(() => {
         return {
             question: CompQuizData[currentIndex].question,
             options : CompQuizData[currentIndex].options,
@@ -30,17 +60,20 @@ export default class Quiz extends Component {
 
     //Handles Click event for the next button
     nextQuestionHander = () => {
-        const {userAnswer, answer, score} = this.state
-        this.setState({
-            currentIndex: this.state.currentIndex + 1
-        })
+        const {userAnswer, answer, score} = this.state                
 
     //Check for correct answer and increment score
         if(userAnswer === answer){
             this.setState({
-                score: score + 1              
+                score: score + 1,   
+                currentIndex: this.state.currentIndex + 1,   
+                selectedAnswer:false                       
+            })            
+        }else{
+            this.setState({
+                openDialog: true,
+                currentIndex: this.state.currentIndex            
             })
-            console.log(score);
         }
     }
 
@@ -66,25 +99,31 @@ componentDidUpdate(prevProps, prevState){
 checkAnswer = answer => {
     this.setState({
         userAnswer: answer,
-        disabled:false
+        disabled:false,
+        selectedAnswer:true
     })
 }
 
 //Responds to the click of the finish button
 finishHandler =() => {
-     const { userAnswer, answer, score } = this.state
-      if (userAnswer === answer) {
-      this.setState({
-        score: score + 1
-      })
-    }
-    if(this.state.currentIndex === CompQuizData.length -1){
+    const { userAnswer, answer, score } = this.state
+    if(userAnswer === answer){
         this.setState({
-            quizEnd:true
-        })       
+            score: score + 1,   
+            selectedAnswer:false                       
+        })  
+        if(this.state.currentIndex === CompQuizData.length -1){
+            this.setState({
+                quizEnd:true
+            })       
+        }          
+    }else{
+        this.setState({
+            openDialog: true,
+            currentIndex: this.state.currentIndex            
+        })
     }
-    console.log(this.state.score);
-
+    
 }
 
 repeat =() => { 
@@ -95,10 +134,9 @@ repeat =() => {
             question: CompQuizData[currentIndex].question,
             options : CompQuizData[currentIndex].options,
             answer: CompQuizData[currentIndex].answer,
-            score:0
-        })       
-         
-
+            score:0,
+            selectedAnswer:false
+        })                
 }
     render() {
         const {question, options, currentIndex, userAnswer} = this.state //get the current state              
@@ -111,8 +149,8 @@ repeat =() => {
                             <div className="col" >
                                 { this.state.quizEnd ?
                                  <div className="card text-dark bg-white" style={styles.cardq} >      
-                                    <h1 className="m-2 text-center text-success" >Prueba finalizada. </h1>
-                                        <h2 className="text-center text-info" >Obtuviste {this.state.score} punto(s)</h2>
+                                    <h1 className="m-2 text-center text-success" >Felicitaciones terminaste el test. </h1>
+                                        {/*<h2 className="text-center text-info" >Obtuviste {this.state.score} punto(s)</h2>
                                         <p className="m-1" >Las respuestas correctas son: </p>
                                         <ul>
                                             {CompQuizData.map((item, index) => (
@@ -121,7 +159,8 @@ repeat =() => {
                                                     {item.answer}
                                                 </li>
                                             ))}
-                                        </ul>
+                                            </ul>*/}
+                                            <CongratsAnim/>
                                     <button  
                                         className="btn btn-primary"
                                         onClick= {() => this.repeat()}>Repetir
@@ -133,8 +172,8 @@ repeat =() => {
                                         {options.map((option, key) => (  //for each option, new paragraph
                                         <ul className="mt-1" key={key}  >
                                             <button  
-                                                className={`btn btn-primary ${userAnswer === option ? "btn btn-success" : null} 
-                                                         text-justify mr-5 ` }
+                                                className={`btn btn-primary ${userAnswer === option && this.state.selectedAnswer  ? "btn btn-success" : null} 
+                                                         text-justify mr-4 ` }
                                                 disabled = {this.state.disabled2}      
                                                 onClick= {() => this.checkAnswer(option, key) }>
                                                 {option}
@@ -155,9 +194,24 @@ repeat =() => {
                                         className=" ui inverted button btn btn-success  "
                                         disabled = {this.state.disabled}
                                         onClick = {this.finishHandler}
-                                        >Finish</button>
+                                        >Finalizar</button>
                                     }
-                                </div>}
+                                </div>}                                
+                                <Dialog open={this.state.openDialog} onClose={this.handleToClose} >      
+                                    <DialogContent>
+                                    <DialogContentText>
+                                        <div className="alert alert-warning"  role="alert" > 
+                                            Parece que tu respuesta no es correcta, verificala! :)
+                                        </div> 
+                                    </DialogContentText>
+                                    </DialogContent>
+                                    <DialogActions>
+                                    <Button onClick={this.handleToClose} 
+                                        color="primary" autoFocus>
+                                        Cerrar
+                                    </Button>
+                                    </DialogActions>
+                                </Dialog> 
                         </div>                  
                     </div>        
                 </div>    
@@ -185,6 +239,6 @@ const styles = {
         height:400,
         display:'flex',       
         alignItems:'center',
-        justifyContent:'space-evely'
+        justifyContent:'space-evenly'
     }
 }

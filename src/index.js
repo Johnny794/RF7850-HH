@@ -18,6 +18,7 @@ import OperMedia from './components/Eolica/OperMedia'
 import ComponentesMedia from './components/Eolica/ComponentesMedia'
 import ProgramacionMedia from './components/Eolica/ProgramacionMedia'
 import QuicklookMedia from './components/Eolica/QuicklookMedia'
+import Encuesta from './components/Eolica/Encuesta'
 
 ReactDOM.render(
     <Router>
@@ -34,7 +35,8 @@ ReactDOM.render(
                 <Route exact path = '/oper-quiz' component={OperMedia}/>
                 <Route exact path = '/comp-quiz' component={ComponentesMedia}/> 
                 <Route exact path = '/prog-quiz' component={ProgramacionMedia}/> 
-                <Route exact path = '/quick-quiz' component={QuicklookMedia}/>                                               
+                <Route exact path = '/quick-quiz' component={QuicklookMedia}/> 
+                <Route exact path = '/encuesta' component={Encuesta}/>                                               
             </main>
         </div>
     </Router>, 

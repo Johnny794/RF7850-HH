@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import {ProgQuizData} from './ProgQuizData'
+import {EncuestaData} from './EncuestaData'
 import { BsArrowCounterclockwise } from "react-icons/bs";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
-import CongratsAnim from "./congratsAnim"
+import CongratsAnim from "./Quiz/congratsAnim"
+import {Link} from 'react-router-dom';
 
 
 export default class Quiz extends Component {
@@ -20,10 +21,11 @@ export default class Quiz extends Component {
         quizEnd: false, //True if it's the last question
         score: 0,      //the Score
         disabled: true,
-        openDialog: false
+        openDialog: false,
+        selectedAnswer: false       
     }
-  }
-
+  }  
+  
   handleClickToOpen = () => {
     console.log("open")
     //const {openDialog} = this.state //get the current state
@@ -46,14 +48,13 @@ export default class Quiz extends Component {
     ) 
   };
 
-
-  loadQuiz = () => {
-    const {currentIndex} = this.state //get the current index
-    this.setState(() => {
+    loadQuiz = () => {
+        const {currentIndex} = this.state //get the current index
+        this.setState(() => {
         return {
-            question: ProgQuizData[currentIndex].question,
-            options : ProgQuizData[currentIndex].options,
-            answer: ProgQuizData[currentIndex].answer          
+            question: EncuestaData[currentIndex].question,
+            options : EncuestaData[currentIndex].options,
+            answer: EncuestaData[currentIndex].answer          
         }
     }
     )
@@ -63,19 +64,10 @@ export default class Quiz extends Component {
     nextQuestionHander = () => {
         const {userAnswer, answer, score} = this.state                
 
-    //Check for correct answer and increment score
-        if(userAnswer === answer){
-            this.setState({
-                score: score + 1,   
-                currentIndex: this.state.currentIndex + 1,   
-                selectedAnswer:false                       
-            })            
-        }else{
-            this.setState({
-                openDialog: true,
-                currentIndex: this.state.currentIndex            
-            })
-        }        
+        this.setState({
+            currentIndex: this.state.currentIndex + 1,   
+            selectedAnswer:false                       
+        })            
     }
 
     componentDidMount(){
@@ -88,9 +80,9 @@ componentDidUpdate(prevProps, prevState){
         this.setState(() => {
             return {
                 disabled: true,
-                question: ProgQuizData[currentIndex].question,
-                options : ProgQuizData[currentIndex].options,
-                answer: ProgQuizData[currentIndex].answer          
+                question: EncuestaData[currentIndex].question,
+                options : EncuestaData[currentIndex].options,
+                answer: EncuestaData[currentIndex].answer          
             }
         });
 
@@ -100,31 +92,20 @@ componentDidUpdate(prevProps, prevState){
 checkAnswer = answer => {
     this.setState({
         userAnswer: answer,
-        disabled:false
+        disabled:false,
+        selectedAnswer:true
     })
 }
 
 //Responds to the click of the finish button
 finishHandler =() => {
-    
     const { userAnswer, answer, score } = this.state
-    if(userAnswer === answer){
-        this.setState({
-            score: score + 1,   
-            selectedAnswer:false                       
-        })  
-        if(this.state.currentIndex === ProgQuizData.length -1){
+    
+    if(this.state.currentIndex === EncuestaData.length -1){
             this.setState({
                 quizEnd:true
             })       
-        }          
-    }else{
-        this.setState({
-            openDialog: true,
-            currentIndex: this.state.currentIndex            
-        })
-    }
-
+        }              
 }
 
 repeat =() => { 
@@ -132,27 +113,37 @@ repeat =() => {
     this.setState({
             quizEnd:false,
             currentIndex:0,
-            question: ProgQuizData[currentIndex].question,
-            options : ProgQuizData[currentIndex].options,
-            answer: ProgQuizData[currentIndex].answer,
-            score:0
-        })       
-         
-
+            question: EncuestaData[currentIndex].question,
+            options : EncuestaData[currentIndex].options,
+            answer: EncuestaData[currentIndex].answer,
+            score:0,
+            selectedAnswer:false
+        })                
 }
     render() {
         const {question, options, currentIndex, userAnswer} = this.state //get the current state              
         return (
             <div style={styles.contain} > 
-                <div className="card text-white bg-dark " style={{height:'700px'}}  >
-                <h4 className="mt-2 align-self-center "  >Resuelve este sencillo test</h4>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <ul className="navbar-nav mr-auto ">
+                        <Link to = "/home">
+                            <li className="nav-item active">
+                                <button className="btn btn-primary btn-sm">Atras</button>
+                            </li>
+                        </Link>                 
+                    </ul> 
+                    <h4 className="navbar-brand  ">Encuesta</h4>
+                </nav> 
+
+                <div style={{minHeight:'100vh'}}  className='card text-white bg-dark m-1 ' >
+                <h4 className="mt-2 align-self-center "  >Tu opinión es importante</h4>
                     <div className="card-body d-flex justify-content-center  ">
                         <div className="row" >
                             <div className="col" >
                                 { this.state.quizEnd ?
                                  <div className="card text-dark bg-white" style={styles.cardq} >      
-                                     <h1 className="m-2 text-center text-success" >Felicitaciones terminaste el test. </h1>                                                                               
-                                        <CongratsAnim/>
+                                    <h1 className="m-2 text-center text-success" >Muchas gracias por tu opinión </h1>                                        
+                                            <CongratsAnim/>
                                     <button  
                                         className="btn btn-primary"
                                         onClick= {() => this.repeat()}>Repetir
@@ -160,11 +151,11 @@ repeat =() => {
                                     </button>                                  
                                 </div> :<div className="card text-dark bg-white" style={styles.cardq} >
                                     <h2 className="m-2 text-center">{question}</h2>
-                                    <span className="text-center" >{`Pregunta ${currentIndex+1} de ${ProgQuizData.length}`}</span>
+                                
                                         {options.map((option, key) => (  //for each option, new paragraph
                                         <ul className="mt-1" key={key}  >
                                             <button  
-                                                className={`btn btn-primary ${userAnswer === option ? "btn btn-success" : null} 
+                                                className={`btn btn-primary ${userAnswer === option && this.state.selectedAnswer  ? "btn btn-success" : null} 
                                                          text-justify mr-4 ` }
                                                 disabled = {this.state.disabled2}      
                                                 onClick= {() => this.checkAnswer(option, key) }>
@@ -173,7 +164,7 @@ repeat =() => {
                                         </ul>
                                         
                                     ))}
-                                    {currentIndex < ProgQuizData.length -1 &&  
+                                    {currentIndex < EncuestaData.length -1 &&  
                                     // Next button only displays if the above is true
                                     <button 
                                         className="ui inverted button btn btn-success text-ligth " 
@@ -181,29 +172,14 @@ repeat =() => {
                                         onClick = {this.nextQuestionHander}
                                         >Siguiente pregunta</button>
                                     }
-                                    {currentIndex === ProgQuizData.length -1 &&
+                                    {currentIndex === EncuestaData.length -1 &&
                                     <button
                                         className=" ui inverted button btn btn-success  "
                                         disabled = {this.state.disabled}
                                         onClick = {this.finishHandler}
                                         >Finalizar</button>
                                     }
-                                </div>}
-                                <Dialog open={this.state.openDialog} onClose={this.handleToClose} >      
-                                    <DialogContent>
-                                    <DialogContentText>
-                                        <div className="alert alert-warning"  role="alert" > 
-                                            Parece que tu respuesta no es correcta, verificala! :)
-                                        </div> 
-                                    </DialogContentText>
-                                    </DialogContent>
-                                    <DialogActions>
-                                    <Button onClick={this.handleToClose} 
-                                        color="primary" autoFocus>
-                                        Cerrar
-                                    </Button>
-                                    </DialogActions>
-                                </Dialog> 
+                                </div>}                                                                
                         </div>                  
                     </div>        
                 </div>    
@@ -215,7 +191,7 @@ repeat =() => {
 
 const styles = {
     contain:{
-        margin:5              
+                   
     },
     imagen:{
         width:300,
@@ -227,6 +203,6 @@ const styles = {
         height:500
     },
     cardq:{
-        width:500,
+        width:800        
     }
 }

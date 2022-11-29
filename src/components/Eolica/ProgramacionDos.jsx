@@ -38,7 +38,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                             <div align='center' >
-                                <img src="./assets/n1.png" className='m-5' style={{width:700}} />                          
+                                <img src="./assets/n1.png" className='m-5' style={{width:700, borderRadius:15}} />                          
                             </div>
                     </div>
                     <div className="alert col bg-primary"  role="alert"  style={{height:450}} >
@@ -52,7 +52,7 @@ const ImplementacionEolica = () => {
                                 </ul>                                
                             </div>
                             <div align='center' >
-                                    <img src="./assets/n2.png" className='m-5' style={{width:700}}/>                          
+                                    <img src="./assets/n2.png" className='m-5' style={{width:700, borderRadius:15}}/>                          
                                 </div>
                     </div>
                     <div className="alert col bg-primary"  role="alert" style={{height:500}} >
@@ -63,7 +63,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div align='center'>
-                                    <img src="./assets/n3.png" className='m-5' style={{width:700}} />                          
+                                    <img src="./assets/n3.png" className='m-5' style={{width:700, borderRadius:15}} />                          
                                 </div> 
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -74,7 +74,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/n3.png" className='m-5' style={{width:800}} />                          
+                                    <img src="./assets/n3.png" className='m-5' style={{width:800, borderRadius:15}} />                          
                                 </div>                                 
                     </div> 
                     <div className="alert col bg-primary"  role="alert" style={{height:500}} >
@@ -87,7 +87,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/n4.png" className='m-5' style={{width:800}} />                          
+                                    <img src="./assets/n4.png" className='m-5' style={{width:800, borderRadius:15}} />                          
                                 </div>                                 
                     </div>   
                     <div className="alert col bg-primary"  role="alert" style={{height:500}} >
@@ -99,7 +99,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/n5.png" className='m-5' style={{width:800}} />                          
+                                    <img src="./assets/n5.png" className='m-5' style={{width:800, borderRadius:15}} />                          
                                 </div>                                 
                         </div>       
 
@@ -112,8 +112,8 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/n6.png" className='m-5' style={{width:800}} />
-                                    <img src="./assets/n7.png" className='m-5' style={{width:340}} />                          
+                                    <img src="./assets/n6.png" className='m-5' style={{width:800, borderRadius:15}} />
+                                    <img src="./assets/n7.png" className='m-5' style={{width:340, borderRadius:15}} />                          
                                 </div>                                 
                     </div>                                                  
                 </Carousel>            

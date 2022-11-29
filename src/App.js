@@ -4,8 +4,7 @@ import "./styles/Home.css"
 
 function App() {
   return (
-    <div>
-      <header className="App-header">
+    <div className='app-contain' >      
         <div className="contain text">
         <h2>AMBIENTE DE APRENDIZAJE HARRIS RF-7850M-HH</h2>
             <img src="assets/uno.png" alt=" " className="logo1"/>
@@ -16,8 +15,6 @@ function App() {
             <img src="assets/logoejercito.png" alt="" className="logo"/>
             
         </div>     
-      </header>
-      
     </div>
   );
 }

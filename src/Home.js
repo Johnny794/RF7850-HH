@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-import { BsArrowLeft } from "react-icons/bs";
-import Animation from './EnergiasAnimation';
-import Down from './ArrowDownAnimation'
 import "./styles/Energias.css"
 
 function Home() {
@@ -18,18 +15,17 @@ function Home() {
                 </li> 
             </Link>
             </ul>
-            <div className="alert alert-primary" role="alert">
-                    <h2>MODULOS DE APRENDIZAJE </h2>
-            </div>  
-            {/*<Animation/>
-            <div className="alert alert-primary mt-1 row">
-                <h2>Da click en la imagen y aprende sobre ellas</h2>
-                <Down/>
-            </div>*/}
-             
+        </header>
+
+        {/* modules container */}
+
+        <div className="home-contain" >
+            <div className="alert alert-primary" role="alert" align='center'>
+                    <h3>MODULOS DE APRENDIZAJE </h3>
+            </div>              
             <div className="container">
                 <div  className="row ">
-                    <div  className="col-sm mt-5 ">
+                    <div  className="col-sm mt-2 ">
                         <Link to = "/operacion" 
                             data-toggle="tooltip" 
                             data-placement="top" 
@@ -40,7 +36,7 @@ function Home() {
                         </Link>
                     </div>
                     
-                    <div className="col-sm mt-5  ">
+                    <div className="col-sm mt-2  ">
                         <Link to = "/componentes" 
                             data-toggle="tooltip" 
                             data-placement="top" 
@@ -68,7 +64,7 @@ function Home() {
 
             <div className="container">
                 <div  className="row ">
-                    <div  className="col-sm mt-5 ">
+                    <div  className="col-sm mt-2 ">
                         <Link to = "/programacion" 
                             data-toggle="tooltip" 
                             data-placement="top" 
@@ -79,7 +75,7 @@ function Home() {
                         </Link>
                     </div>
                     
-                    <div className="col-sm mt-5  ">
+                    <div className="col-sm mt-2  ">
                         <Link to = "/quicklook" 
                             data-toggle="tooltip" 
                             data-placement="top" 
@@ -91,7 +87,22 @@ function Home() {
                     </div>  
                 </div>    
             </div>
-      </header>
+
+            <div className="container"  >
+                <div style={{display:'flex', justifyContent:'flex-end'}} >                    
+                    <Link to = "/encuesta" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Programación">
+                            <button className="btn btn-outline-white" style={{color:'white'}} >
+                                    Encuesta
+                            </button>                                                                             
+                    </Link>                                                     
+                </div>    
+            </div>
+
+      </div>
+   
       
     </div>
   );

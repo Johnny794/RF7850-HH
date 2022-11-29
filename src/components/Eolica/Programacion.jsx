@@ -48,7 +48,7 @@ const ImplementacionEolica = () => {
                             </ul>
                             </div>
                             <div align='center' >
-                                <img src="./assets/k1.png" className='m-4' style={{width:600}} />                          
+                                <img src="./assets/k1.png" className='m-4' style={{width:600, borderRadius:15}} />                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert"  style={{height:500}} >
@@ -65,7 +65,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                             <div >
-                                <img src="./assets/k2.png" className='m-4' style={{width:700}}/>                          
+                                <img src="./assets/k2.png" className='m-4' style={{width:700, borderRadius:15}}/>                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -77,7 +77,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                                 <div >
-                                    <img src="./assets/k3.png" className='m-5' style={{width:700}} />                          
+                                    <img src="./assets/k3.png" className='m-5' style={{width:700, borderRadius:15}} />                          
                                 </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -89,7 +89,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/k4.png" className='m-4' style={{width:400}} />                          
+                                    <img src="./assets/k4.png" className='m-4' style={{width:400, borderRadius:15}} />                          
                                 </div>                                 
                     </div>                                                   
                 </Carousel>
