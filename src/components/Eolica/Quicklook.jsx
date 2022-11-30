@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -147,7 +146,19 @@ const ImplementacionEolica = () => {
                                 <img src="./assets/q11.png"   className='m-4 mt-2' style={{width:600, height:200, borderRadius:15}} /> 
                                 <img src="./assets/q12.png"   className='mt-2' style={{width:600, height:200, borderRadius:15}}/>                                                              
                         </div> 
+    </div>
+                    
+                    <div className="alert col bg-primary" role="alert" style={{height:500}}> 
+                        <div className="row alert alert-info " align='left'>
+                            <h4>Creación de un PRESET con CPA</h4>
+                        </div>                                                                                              
+                        <div style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', backgroundColor:'transparent'}}>                                                        
+                            <video width="920" height="400" controls >
+                                <source src="./assets/vcpa.mp4" type="video/mp4"></source>                               
+                            </video>                                                                       
+                        </div> 
                     </div>
+                    
                     </Carousel>                                                                                                                                                                    
             </div>                  
                     <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'space-between', padding:'15px', fontSize:'15px', margin:'0px 15px 40px 15px'}} >

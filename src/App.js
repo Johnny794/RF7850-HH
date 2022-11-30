@@ -12,8 +12,7 @@ function App() {
             <h5>FUERZAS MILITARES DE COLOMBIA</h5>
             <h5>EJERCITO NACIONAL</h5>
             <h5>ESCUELA DE COMUNICACIONES</h5>
-            <img src="assets/logoejercito.png" alt="" className="logo"/>
-            
+            <img src="assets/logoejercito.png" alt="" className="logo"/>            
         </div>     
     </div>
   );

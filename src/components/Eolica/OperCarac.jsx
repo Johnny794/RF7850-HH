@@ -1,10 +1,7 @@
 import React from "react";
 import CarcAnim from "./carcAnim"
 import FreqAnim from "./freqAnim"
-import {useSpring, animated} from 'react-spring'
 import {Link} from 'react-router-dom';
-import Click from './click'
-import EolicSteps from './EolicSteps'
 import Dialog from "@material-ui/core/Dialog";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -15,24 +12,14 @@ import { AiFillEdit } from "react-icons/ai";
 
 const EolicaUno = () => {
 
-const [props, set, stop] = useSpring(() => ({position:'relative', zIndex:1}))
-const [props1, set1, stop1] = useSpring(() => ({position:'relative',zIndex:2}))
-function fade(e) {
-    e.preventDefault();
-    set({zIndex:2})   
-    set1({ zIndex:1})   
-    console.log("open") 
-  }
-
-  const [open, setOpen] = React.useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
   
   const handleClickToOpen = () => {
-      console.log("open")
-    setOpen(true);
+    setOpenDialog(true);
   };
   
   const handleToClose = () => {
-    setOpen(false);
+    setOpenDialog(false);
   };
   
 
@@ -52,9 +39,10 @@ function fade(e) {
                 <div className=" row  align-items-center justify-content-center card-body">
                     <FreqAnim/>
                     <img className="m-4 align-self-center " src="./assets/uno2.png" style={{margin:'0% 50% 0 35%'}} />                          
-                </div>                                        
-            </div>
-            
+                </div> 
+              </div>
+
+            {/* Caracteristicas */}
             <div className="card text-white bg-primary mb-1 d-inline-block" style={styles.cardtwo} >                                                                  
                 <div className="card text-white bg-primary mb-1 d-inline-block">    
                     <div className="card-body ">
@@ -75,22 +63,7 @@ function fade(e) {
                     </div>                     
                 </div>                                                                                                                             
             </div>                                                                                                                                   
-        </div>
-        <Dialog open={open} onClose={handleToClose} >      
-        <DialogContent>
-          <DialogContentText>
-          <div>
-                <img src="./assets/rf1.png" style={{margin:'0% 5% 0 0%'}} />                          
-            </div>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleToClose} 
-                  color="primary" autoFocus>
-            Cerrar
-          </Button>
-        </DialogActions>
-      </Dialog>  
+        </div>          
       <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'end', padding:'15px', fontSize:'15px'}} >
       <Link to = "/oper-quiz" >        
               <button style={{margin:'2px', color:'white'}} className="btn btn-primary btn-sm" > < AiFillEdit style={{margin:'2px', fontSize:'15px'}}/> Test</button>          
