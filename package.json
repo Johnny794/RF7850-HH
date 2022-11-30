@@ -1,7 +1,7 @@
 {
-  "name": "energiasrenovables",
+  "name": "RadiosHarris",
   "version": "0.1.0",
-  "description": "App sobre energis renovables",
+  "description": "App sobre radios Harris",
   "author": "willjw3",
   "build": {
     "appId": "react.electron",

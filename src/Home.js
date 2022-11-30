@@ -220,7 +220,7 @@ function Home() {
                             data-placement="top" 
                             title="Programación">
                             <button className="btn btn-outline-white" style={{color:'white'}} >
-                                    Encuesta
+                                    Encuesta Final
                             </button>                                                                             
                     </Link>                                                     
                 </div>    
