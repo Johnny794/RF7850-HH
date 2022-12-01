@@ -1,15 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft} from "react-icons/bs";
+import Comp from './Comp';
 
-import OperCarac from './OperCarac'
-import EolicSteps from './EolicSteps'
+const Solar = () => {
 
-
-
-const Eolica = () => {
-
-    return (       
+    return (
+    <div>
         <div>
             <div style={styles.contain} >
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -20,15 +16,20 @@ const Eolica = () => {
                             </li> 
                         </Link>                  
                     </ul> 
-                    <h4 className="navbar-brand  ">OPERACIÓN RADIO HARRIS RF-7850M</h4>   
+                    <h4 className="navbar-brand  ">COMPONENTES RADIO HARRIS RF-7850M</h4>   
                 </nav>  
-                <OperCarac/>         
+                <Comp/>                   
             </div>
-        </div>             
+        </div>  
+         
+    </div>
+
+
+        
     )
 }
 
-export default Eolica
+export default Solar
 
 const styles={
     contain:{
@@ -38,17 +39,7 @@ const styles={
         margin:5,
     },
     image:{
-        width:400
-    },
-    image2:{
-        width:300
-    },
-    image3:{
-        width:200,
-        height:300,
-    },
-    image4:{
-        width:300
+        width:500
     },
     cardtwo:{
         backgroundColor:'#fff',

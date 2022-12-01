@@ -13,28 +13,28 @@ export const EncuestaData = [
     },
     {
         id: 2,
-        question: `3.cree usted que sus conocimientos con este aplicativo mejoraron en el manejo de los radios Harris M-HH7850?`,
+        question: `3. Usted recomendaría esté aplicativo  a otras personas para el manejo del radio Harris M-HH7850`,
         options: [`a. Si`, `b. No`],
         answer: ``
     },
     {
         id: 3,
-        question: `4.Conoce la importancia de los radios Harris M-HH7850 en el desarrollo de las operaciones militares`,
+        question: `4.Cree usted que sus conocimientos con este aplicativo mejoraron en el manejo de los radios Harris M-HH7850?`,
         options: [`a. Si`, `b. No`],
         answer: ``
     },
     {
         id: 4,
-        question: `5. Considera que la ESCOM debería implementar esta  herramienta tecnológica e innovadora que le permita obtener conocimientos del radio Harris M-HH7850`,
+        question: `5.Conoce la importancia de los radios Harris M-HH7850 en el desarrollo de las operaciones militares`,
         options: [`a. Si`, `b. No`],
         answer: ``
     },
     {
         id: 5,
-        question: `6. Considera que la ESCOM debería implementar más cursos en el manejo de los radios Harris M-HH7850`,
+        question: `5. Considera que la ESCOM debería implementar esta  herramienta tecnológica e innovadora que le permita obtener conocimientos del radio Harris M-HH7850`,
         options: [`a. Si`, `b. No`],
         answer: ``
-    },
+    },    
     {
         id: 6,
         question: `7. Tiene conocimiento del costo de un radio Harris M-HH7850`,

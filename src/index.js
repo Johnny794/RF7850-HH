@@ -8,17 +8,17 @@ import'mdbreact/dist/css/mdb.css';
 
 import Inicio from "./App"
 import Home from "./Home"
-import Operacion from './components/Eolica/Operacion.jsx';
-import Componentes from './components/Eolica/Componentes.jsx';
-import Programacion from './components/Eolica/Programacion.jsx';
-import ProgramacionDos from './components/Eolica/ProgramacionDos.jsx';
-import Quicklook from './components/Eolica/Quicklook.jsx';
-import Rompecabezas from './components/Eolica/Rompecabezas'
-import OperMedia from './components/Eolica/OperMedia'
-import ComponentesMedia from './components/Eolica/ComponentesMedia'
-import ProgramacionMedia from './components/Eolica/ProgramacionMedia'
-import QuicklookMedia from './components/Eolica/QuicklookMedia'
-import Encuesta from './components/Eolica/Encuesta'
+import Operacion from './components/RF7850/Operacion.jsx';
+import Componentes from './components/RF7850/Componentes.jsx';
+import Programacion from './components/RF7850/Programacion.jsx';
+import ProgramacionDos from './components/RF7850/ProgramacionDos.jsx';
+import Quicklook from './components/RF7850/Quicklook.jsx';
+import Rompecabezas from './components/RF7850/Rompecabezas'
+import OperMedia from './components/RF7850/OperMedia'
+import ComponentesMedia from './components/RF7850/ComponentesMedia'
+import ProgramacionMedia from './components/RF7850/ProgramacionMedia'
+import QuicklookMedia from './components/RF7850/QuicklookMedia'
+import Encuesta from './components/RF7850/Encuesta'
 
 ReactDOM.render(
     <Router>

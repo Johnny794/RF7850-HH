@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import {EncuestaData} from './EncuestaData'
 import { BsArrowCounterclockwise } from "react-icons/bs";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import Button from "@material-ui/core/Button";
 import CongratsAnim from "./Quiz/congratsAnim"
 import {Link} from 'react-router-dom';
 
@@ -62,8 +57,6 @@ export default class Quiz extends Component {
 
     //Handles Click event for the next button
     nextQuestionHander = () => {
-        const {userAnswer, answer, score} = this.state                
-
         this.setState({
             currentIndex: this.state.currentIndex + 1,   
             selectedAnswer:false                       
@@ -71,7 +64,8 @@ export default class Quiz extends Component {
     }
 
     componentDidMount(){
-    this.loadQuiz();
+        window.open('https://forms.gle/iTicrxB5HVw6EucH9')
+        this.loadQuiz();
 }
 
 componentDidUpdate(prevProps, prevState){
@@ -98,9 +92,7 @@ checkAnswer = answer => {
 }
 
 //Responds to the click of the finish button
-finishHandler =() => {
-    const { userAnswer, answer, score } = this.state
-    
+finishHandler =() => {    
     if(this.state.currentIndex === EncuestaData.length -1){
             this.setState({
                 quizEnd:true

@@ -1,6 +1,5 @@
 import React, { useState }  from 'react';
 import { Link } from "react-router-dom"
-import "./styles/Energias.css"
 import Dialog from "@material-ui/core/Dialog";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -75,7 +74,7 @@ function Home() {
                 </div>
 
                 <Dialog open={openDialog} onClose={handleToClose} >   
-                    <DialogTitle id="simple-dialog-title">{ msgIndex==0 ? 'Misión' : 'Vision' }</DialogTitle>   
+                    <DialogTitle id="simple-dialog-title">{ msgIndex===0 ? 'Misión' : 'Vision' }</DialogTitle>   
                     <DialogContent>
                         <DialogContentText>
                                 <div className="alert alert-warning"  role="alert" align='justify' > 
@@ -218,10 +217,10 @@ function Home() {
                     <Link to = "/encuesta" 
                             data-toggle="tooltip" 
                             data-placement="top" 
-                            title="Programación">
+                            title="Programación">                            
                             <button className="btn btn-outline-white" style={{color:'white'}} >
-                                    Encuesta Final
-                            </button>                                                                             
+                                 Encuesta Final
+                            </button>                                                                                                                              
                     </Link>                                                     
                 </div>    
             </div>

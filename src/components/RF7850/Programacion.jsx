@@ -1,9 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft } from "react-icons/bs";
 import { FiCornerRightUp } from "react-icons/fi";
-import Turbina from './turbina'
-import { BsArrowRight } from "react-icons/bs";
 import HandConf from './handconf'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -48,7 +45,7 @@ const ImplementacionEolica = () => {
                             </ul>
                             </div>
                             <div align='center' >
-                                <img src="./assets/k1.png" className='m-4' style={{width:600, borderRadius:15}} />                          
+                                <img src="./assets/k1.png" alt='imagen' className='m-4' style={{width:600, borderRadius:15}} />                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert"  style={{height:500}} >
@@ -65,7 +62,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                             <div >
-                                <img src="./assets/k2.png" className='m-4' style={{width:700, borderRadius:15}}/>                          
+                                <img src="./assets/k2.png" alt='imagen' className='m-4' style={{width:700, borderRadius:15}}/>                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -77,7 +74,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                                 <div >
-                                    <img src="./assets/k3.png" className='m-5' style={{width:700, borderRadius:15}} />                          
+                                    <img src="./assets/k3.png" alt='imagen' className='m-5' style={{width:700, borderRadius:15}} />                          
                                 </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -89,7 +86,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/k4.png" className='m-4' style={{width:400, borderRadius:15}} />                          
+                                    <img src="./assets/k4.png" alt='imagen'  className='m-4' style={{width:400, borderRadius:15}} />                          
                                 </div>                                 
                     </div>                                                   
                 </Carousel>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import { BsArrowLeft } from "react-icons/bs";
 import Block from './Block';
 
 export default class Media extends Component {

@@ -1,16 +1,9 @@
 import React from "react";
-import {useSpring} from 'react-spring'
 import {Link} from 'react-router-dom';
 import { AiFillEdit } from "react-icons/ai";
 import CompAnim from './compAnim'
 
 const EolicaUno = () => {
-
-const [props, set, stop] = useSpring(() => ({opacity: 0}))
-function fade(e) {
-    e.preventDefault();
-    set({opacity: 1})
-  }
 
   return (
     <div style={styles.card} className="card text-white bg-dark "> 
@@ -36,7 +29,7 @@ function fade(e) {
                 </ul>    
             </div>             
             <div >                        
-                <img src="./assets/rf1.png" />                                                      
+                <img src="./assets/rf1.png" alt='imagen'  />                                                      
             </div>                                                                             
         </div> 
         <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'end', padding:'15px', fontSize:'15px', margin:'40px 15px 40px 15px'}} >

@@ -2,7 +2,7 @@
   "name": "RadiosHarris",
   "version": "0.1.0",
   "description": "App sobre radios Harris",
-  "author": "willjw3",
+  "author": "",
   "build": {
     "appId": "react.electron",
     "win": {

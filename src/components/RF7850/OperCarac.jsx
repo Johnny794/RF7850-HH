@@ -2,26 +2,10 @@ import React from "react";
 import CarcAnim from "./carcAnim"
 import FreqAnim from "./freqAnim"
 import {Link} from 'react-router-dom';
-import Dialog from "@material-ui/core/Dialog";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import Button from "@material-ui/core/Button";
 import { AiFillEdit } from "react-icons/ai";
 
 const EolicaUno = () => {
 
-  const [openDialog, setOpenDialog] = React.useState(false);
-  
-  const handleClickToOpen = () => {
-    setOpenDialog(true);
-  };
-  
-  const handleToClose = () => {
-    setOpenDialog(false);
-  };
-  
 
   return (
     <div className="card text-white bg-dark mt-1 " style={{height:900}} >                 
@@ -38,7 +22,7 @@ const EolicaUno = () => {
                 </div>
                 <div className=" row  align-items-center justify-content-center card-body">
                     <FreqAnim/>
-                    <img className="m-4 align-self-center " src="./assets/uno2.png" style={{margin:'0% 50% 0 35%'}} />                          
+                    <img className="m-4 align-self-center " alt="imagen" src="./assets/uno2.png" style={{margin:'0% 50% 0 35%'}} />                          
                 </div> 
               </div>
 
