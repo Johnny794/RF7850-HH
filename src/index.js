@@ -19,6 +19,7 @@ import ComponentesMedia from './components/RF7850/ComponentesMedia'
 import ProgramacionMedia from './components/RF7850/ProgramacionMedia'
 import QuicklookMedia from './components/RF7850/QuicklookMedia'
 import Encuesta from './components/RF7850/Encuesta'
+import Referencias from './components/RF7850/Referencias'
 
 ReactDOM.render(
     <Router>
@@ -36,7 +37,8 @@ ReactDOM.render(
                 <Route exact path = '/comp-quiz' component={ComponentesMedia}/> 
                 <Route exact path = '/prog-quiz' component={ProgramacionMedia}/> 
                 <Route exact path = '/quick-quiz' component={QuicklookMedia}/> 
-                <Route exact path = '/encuesta' component={Encuesta}/>                                               
+                <Route exact path = '/encuesta' component={Encuesta}/> 
+                <Route exact path = '/referencias' component={Referencias}/>                                               
             </main>
         </div>
     </Router>, 

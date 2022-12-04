@@ -120,7 +120,7 @@ export default class Media extends Component {
                       <div className="row mt-5" > 
                         <div className= "col mt-5">
                           <div className="wrapper">
-                              <img src="./assets/RF1.png" className="App-logo" alt="radio" />
+                              <img src="./assets/RF1.png" style={{width:'50%'}} className="App-logo" alt="radio" />
                           </div>
                         </div>
                         <div className="col mt-5">

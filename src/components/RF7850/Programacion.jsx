@@ -45,7 +45,7 @@ const ImplementacionEolica = () => {
                             </ul>
                             </div>
                             <div align='center' >
-                                <img src="./assets/k1.png" alt='imagen' className='m-4' style={{width:600, borderRadius:15}} />                          
+                                <img src="./assets/k1.png" alt='imagen' className='m-4' style={{width:'50%', borderRadius:'10px'}} />                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert"  style={{height:500}} >
@@ -62,7 +62,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                             <div >
-                                <img src="./assets/k2.png" alt='imagen' className='m-4' style={{width:700, borderRadius:15}}/>                          
+                                <img src="./assets/k2.png" alt='imagen' className='m-4' style={{width:'60%', borderRadius:'10px'}}/>                          
                             </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -74,7 +74,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                             </div>
                                 <div >
-                                    <img src="./assets/k3.png" alt='imagen' className='m-5' style={{width:700, borderRadius:15}} />                          
+                                    <img src="./assets/k3.png" alt='imagen' className='m-5' style={{width:'60%', borderRadius:'10px'}} />                          
                                 </div>
                     </div>
                     <div className="alert col bg-primary" role="alert" style={{height:500}} >
@@ -86,7 +86,7 @@ const ImplementacionEolica = () => {
                                 </ul>
                                 </div>
                                 <div >
-                                    <img src="./assets/k4.png" alt='imagen'  className='m-4' style={{width:400, borderRadius:15}} />                          
+                                    <img src="./assets/k4.png" alt='imagen'  className='m-4' style={{width:'30%', borderRadius:'10px'}} />                          
                                 </div>                                 
                     </div>                                                   
                 </Carousel>

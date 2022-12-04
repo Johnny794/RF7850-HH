@@ -154,9 +154,9 @@ function Home() {
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Componentes">  
-                            <img src="./assets/componentes12.png" 
+                            <img style={{width:'80%', height:'60%'}} src="./assets/componentes12.png" 
                             alt="Energia Fotovoltaica" 
-                            className="solar rounded-circle float-left btn btn-outline-dark" />
+                            className="rounded-circle float-left btn btn-outline-dark" />
                         </Link>                        
                     </div>
                     
@@ -165,9 +165,9 @@ function Home() {
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Operación" >
-                            <img src="./assets/operacion21.png" 
+                            <img style={{width:'80%', height:'60%'}} src="./assets/operacion21.png" 
                             alt="Operación" 
-                            className="eolica rounded-circle float-right btn btn-outline-dark"/>                          
+                            className="rounded-circle float-right btn btn-outline-dark"/>                          
                         </Link>
                     </div>
                 </div>    
@@ -193,9 +193,9 @@ function Home() {
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Programación" >
-                            <img src="./assets/programacion12.png" 
+                            <img style={{width:'80%', height:'60%'}} src="./assets/programacion12.png" 
                             alt="programación" 
-                            className="eolica rounded-circle float-left btn btn-outline-dark"/>                          
+                            className="rounded-circle float-left btn btn-outline-dark"/>                          
                         </Link>
                     </div>
                     
@@ -204,9 +204,9 @@ function Home() {
                             data-toggle="tooltip" 
                             data-placement="top" 
                             title="Quicklock">  
-                            <img src="./assets/quicklock12.png" 
+                            <img style={{width:'80%', height:'60%'}} src="./assets/quicklock12.png" 
                             alt="quicklock12" 
-                            className="solar rounded-circle float-right btn btn-outline-dark" />
+                            className="rounded-circle float-right btn btn-outline-dark" />
                         </Link>
                     </div>  
                 </div>    
@@ -220,6 +220,14 @@ function Home() {
                             title="Programación">                            
                             <button className="btn btn-outline-white" style={{color:'white'}} >
                                  Encuesta Final
+                            </button>                                                                                                                              
+                    </Link>  
+                    <Link to = "/referencias" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Referencias">                            
+                            <button className="btn btn-outline-white" style={{color:'white'}} >
+                                Referencias
                             </button>                                                                                                                              
                     </Link>                                                     
                 </div>    

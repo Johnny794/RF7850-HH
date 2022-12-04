@@ -29,7 +29,7 @@ const EolicaUno = () => {
                 </ul>    
             </div>             
             <div >                        
-                <img src="./assets/rf1.png" alt='imagen'  />                                                      
+                <img style={{width:'105%'}} src="./assets/rf1.png" alt='imagen'  />                                                      
             </div>                                                                             
         </div> 
         <div style={{backgroundColor:'transparent', display:'flex', flexDirection:'row', justifyContent:'end', padding:'15px', fontSize:'15px', margin:'40px 15px 40px 15px'}} >
